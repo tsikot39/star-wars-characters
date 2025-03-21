@@ -5,7 +5,7 @@ import App from "./App";
 import ReactModal from "react-modal";
 import reportWebVitals from "./reportWebVitals";
 
-ReactModal.setAppElement("#root"); // Required for react-modal
+ReactModal.setAppElement("#root");
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

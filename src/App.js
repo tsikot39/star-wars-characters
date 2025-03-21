@@ -11,6 +11,7 @@ import {
 import CharacterCard from "./components/CharacterCard";
 import CharacterModal from "./components/CharacterModal";
 import SearchAndFilter from "./components/SearchAndFilter";
+import { ClipLoader } from "react-spinners";
 import "./App.css";
 
 const App = () => {
@@ -165,7 +166,11 @@ const App = () => {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return (
+      <div className="loading-spinner">
+        <ClipLoader color="#007bff" size={50} />
+      </div>
+    );
   }
 
   if (error) {
