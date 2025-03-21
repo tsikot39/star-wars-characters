@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# Star Wars Character App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This is a React-based web application that displays Star Wars characters fetched from the SWAPI (Star Wars API). Users can view character details, search for characters, and filter them by species, homeworld, or films.
 
-In the project directory, you can run:
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Character Cards: Display character names and random images.
+- Search: Search for characters by name.
+- Filters: Filter characters by species, homeworld, or films.
+- Character Modal: View detailed information about a character.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Setup Instructions
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Clone the Repository
 
-### `npm run build`
+- git clone https://github.com/tsikot39/star-wars-characters.git
+- cd star-wars-characters-app
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Install dependencies
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+npm install
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Run the App
 
-### `npm run eject`
+npm start
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Thought Process and Assumptions
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Thought Process
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+#### Data Fetching
+- The app fetches data from the SWAPI in a structured way, ensuring all necessary details (species, homeworld, films) are available for each character.
+- Pagination is handled to load only the first 12 characters initially for better performance.
 
-## Learn More
+#### UI/UX
+- The app uses a card-based layout for characters, making it visually appealing and easy to navigate.
+- A loading spinner is displayed while data is being fetched to improve user experience.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### Search and Filters
+- Search and filter functionalities are combined to allow users to refine results dynamically.
+- Filters are applied in real-time as the user selects options.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Assumptions
 
-### Code Splitting
+#### API Data
+- The SWAPI will always return valid data for characters, species, homeworlds, and films.
+- If a character has no species, its card color is set to Gray or #1a1a2e.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+#### User Behavior
+- Users will primarily search for characters by name and filter by species, homeworld, or films.
+- Users will click on character cards to view detailed information.
 
-### Analyzing the Bundle Size
+#### Performance
+- Loading only 12 characters initially ensures the app loads quickly.
+- Pagination is only shown when search or filters are applied to avoid unnecessary complexity.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+## Technologies Used
+- Frontend: React, CSS
+- API: SWAPI (Star Wars API)
+- Build Tool: Create React App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Site URL
+- Deployed in Vercel: https://jbc-star-wars-characters.vercel.app/
