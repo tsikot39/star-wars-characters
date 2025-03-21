@@ -1,5 +1,9 @@
 .App {
   text-align: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: white;
 }
 
 .App-logo {
@@ -26,6 +30,39 @@
 
 .App-link {
   color: #61dafb;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.character-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  padding: 16px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.pagination button.active {
+  background-color: #1a1a2e;
+  color: white;
+  border-color: #1a1a2e;
 }
 
 @keyframes App-logo-spin {
