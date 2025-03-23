@@ -7,7 +7,7 @@ This is a React-based web application that displays Star Wars characters fetched
 
 ## Features
 
-- Character Cards: Display character names and random images.
+- Character Cards: Display character names, random images, and are colored based on the character's species.
 - Search: Search for characters by name.
 - Filters: Filter characters by species, homeworld, or films.
 - Character Modal: View detailed information about a character.
